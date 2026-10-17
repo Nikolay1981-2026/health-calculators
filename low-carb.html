@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text x='50' y='72' font-size='68' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+<link rel="manifest" href="manifest.json">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKY6LFBJS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PKY6LFBJS');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Low-Carb Carb Calculator 2026 — Keto, Paleo & Low-Carb Targets</title>
+<meta name="description" content="Calculate your daily carb target for keto, paleo, or low-carb diets. Personalized by body weight, activity level, and goals.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #006064 0%, #00838f 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 620px;
+    width: 100%;
+  }
+  h1 { font-size: 26px; color: #1a2b4a; margin-bottom: 10px; text-align: center; line-height: 1.3; }
+  .subtitle { color: #6b7a99; font-size: 15px; text-align: center; margin-bottom: 30px; line-height: 1.5; }
+  .badge { display: inline-block; background: #e0f7fa; color: #00838f; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; }
+  .center { text-align: center; }
+  label { display: block; font-size: 14px; color: #1a2b4a; margin-bottom: 6px; font-weight: 600; }
+  .hint { font-size: 12px; color: #8a96ab; margin-bottom: 6px; font-weight: normal; }
+  input, select { width: 100%; padding: 13px 15px; font-size: 16px; border: 2px solid #e0e6ef; border-radius: 10px; margin-bottom: 20px; background: #fff; transition: border 0.2s; }
+  input:focus, select:focus { outline: none; border-color: #00838f; }
+  button { width: 100%; padding: 16px; font-size: 17px; font-weight: bold; color: #fff; background: linear-gradient(135deg, #00838f, #006064); border: none; border-radius: 10px; cursor: pointer; transition: transform 0.15s, box-shadow 0.2s; }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,131,143,0.4); }
+  .result { margin-top: 28px; padding: 24px; background: #e0f7fa; border-radius: 14px; display: none; border: 2px solid #b2ebf2; }
+  .result.show { display: block; }
+  .result-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; color: #1a2b4a; }
+  .result-row.total { border-top: 2px solid #b2ebf2; margin-top: 10px; padding-top: 16px; font-size: 20px; font-weight: bold; }
+  .result-row.total span:last-child { color: #00838f; }
+  .tip { background: #fff3e0; border-left: 4px solid #e65100; padding: 14px; border-radius: 6px; margin-top: 16px; font-size: 14px; color: #5d4037; line-height: 1.6; }
+  .note { font-size: 13px; color: #8a96ab; margin-top: 20px; text-align: center; line-height: 1.6; }
+  .faq { background: #e0f7fa; border-radius: 16px; padding: 30px 28px; margin-top: 32px; border: 2px solid #b2ebf2; }
+  .faq-title { font-size: 22px; color: #1a2b4a; margin-bottom: 20px; text-align: center; font-weight: 800; }
+  .faq-item { padding: 16px 0; border-bottom: 1px solid #b2ebf2; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-item h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 8px; font-weight: 700; }
+  .faq-item p { font-size: 14px; color: #55617a; line-height: 1.65; margin: 0; }
+  .related { background: #fff; border-radius: 14px; padding: 24px 26px; margin-top: 28px; border: 2px dashed #80deea; }
+  .related h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 14px; font-weight: 800; }
+  .related ul { list-style: none; padding: 0; }
+  .related li { font-size: 14px; color: #55617a; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid #b2ebf2; }
+  .related li:last-child { border-bottom: none; padding-bottom: 0; }
+  .related a { color: #00838f; font-weight: 700; text-decoration: none; }
+  .related a:hover { text-decoration: underline; }
+  .back-link { display: block; text-align: center; margin-top: 24px; font-size: 14px; color: #00838f; text-decoration: none; font-weight: 600; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center"><span class="badge">🥑 LOW CARB</span></div>
+  <h1>Low-Carb Carb Calculator</h1>
+  <p class="subtitle">How many carbs should you eat on keto, paleo, or low-carb? Get your target based on goals and activity level.</p>
+
+  <label for="weight">Body weight — kg</label>
+  <input type="number" id="weight" placeholder="e.g. 75" value="75">
+
+  <label for="diet">Type of low-carb diet</label>
+  <select id="diet">
+    <option value="keto">Strict Keto (under 20g net carbs)</option>
+    <option value="moderate" selected>Moderate Low-Carb (50–100g)</option>
+    <option value="liberal">Liberal Low-Carb (100–150g)</option>
+  </select>
+
+  <label for="activity">Activity level</label>
+  <select id="activity">
+    <option value="sedentary">Sedentary</option>
+    <option value="moderate" selected>Moderately active</option>
+    <option value="active">Very active</option>
+  </select>
+
+  <button onclick="calculate()">Calculate My Carb Target</button>
+
+  <div class="result" id="result">
+    <div class="result-row">
+      <span>Diet type:</span>
+      <span id="dietType">—</span>
+    </div>
+    <div class="result-row">
+      <span>Activity adjustment:</span>
+      <span id="adjustment">—</span>
+    </div>
+    <div class="result-row total">
+      <span>Daily carb target (net):</span>
+      <span id="carbs">—</span>
+    </div>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="related">
+    <h3>Related calculators</h3>
+    <ul>
+      <li><a href="diabetic-calories.html">Diabetic Calorie Calculator</a> — if you manage blood sugar</li>
+      <li><a href="vegan-macros.html">Vegan Macro Calculator</a> — plant-based macro targets</li>
+      <li><a href="strength-protein.html">Strength Training Protein Calculator</a> — protein for muscle growth</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Low-Carb — FAQ</h2>
+    <div class="faq-item">
+      <h3>How many carbs should I eat on keto?</h3>
+      <p>Strict keto usually means 20–30g of net carbs per day. This keeps your body in ketosis (fat-burning mode). Some people can stay in ketosis up to 50g, but 20g is the safest starting point.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What are "net carbs"?</h3>
+      <p>Net carbs = total carbs minus fiber. Fiber isn't digested and doesn't raise blood sugar, so it's excluded. Example: a food with 10g total carbs and 4g fiber has 6g net carbs.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What can I eat on a low-carb diet?</h3>
+      <p>Meat, fish, eggs, cheese, non-starchy vegetables (spinach, broccoli, zucchini), nuts, seeds, avocado, olive oil, and berries in small amounts. Avoid sugar, bread, pasta, rice, potatoes, and most fruit.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is low-carb safe for everyone?</h3>
+      <p>Mostly yes, but not for everyone. People with kidney disease, pregnant women, and type 1 diabetics should be cautious and consult a doctor. For healthy adults, low-carb is safe and effective for weight loss and blood sugar control.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I avoid the "keto flu"?</h3>
+     <p>The keto flu (fatigue, headache, irritability) happens in the first week as your body adapts. Prevent it by drinking more water and adding electrolytes (sodium, potassium, magnesium). See our <a href="athlete-water.html">Athlete Water Calculator</a> for hydration.</p>
+    </div>
+  </div>
+
+  <p class="note">This calculator provides an estimate for educational purposes only. It is not medical advice. Always consult your doctor or a registered dietitian before starting a low-carb or keto diet, especially if you have diabetes or kidney disease.</p>
+
+  <a href="index.html" class="back-link">← Back to all calculators</a>
+</div>
+
+<script>
+function calculate() {
+  const weight = parseFloat(document.getElementById('weight').value);
+  const diet = document.getElementById('diet').value;
+  const activity = document.getElementById('activity').value;
+
+  if (!weight) {
+    alert('Please enter your body weight');
+    return;
+  }
+
+  let carbs = 0;
+  let dietName = '';
+
+  if (diet === 'keto') {
+    carbs = 20;
+    dietName = 'Strict Keto';
+  } else if (diet === 'moderate') {
+    carbs = 75;
+    dietName = 'Moderate Low-Carb';
+  } else {
+    carbs = 125;
+    dietName = 'Liberal Low-Carb';
+  }
+
+  let adjustment = 'None';
+  if (activity === 'active') {
+    carbs += 20;
+    adjustment = '+20g (active)';
+  } else if (activity === 'sedentary') {
+    carbs -= 10;
+    adjustment = '-10g (sedentary)';
+  }
+
+  if (carbs < 15) carbs = 15;
+
+  const fmt = (n) => Math.round(n) + ' g';
+
+  document.getElementById('dietType').textContent = dietName;
+  document.getElementById('adjustment').textContent = adjustment;
+  document.getElementById('carbs').textContent = fmt(carbs);
+
+  let tipText = '';
+  if (diet === 'keto') {
+    tipText = '⚠️ Keto requires strict carb control. Aim for ' + fmt(carbs) + ' net carbs per day. Focus on fats (avocado, olive oil, nuts) and moderate protein.';
+  } else if (diet === 'moderate') {
+    tipText = '💡 Moderate low-carb is flexible. Aim for ' + fmt(carbs) + ' net carbs per day. Good for weight loss without strict ketosis.';
+  } else {
+    tipText = '✅ Liberal low-carb allows more flexibility. Aim for ' + fmt(carbs) + ' net carbs per day. Great for long-term sustainability.';
+  }
+
+  document.getElementById('tip').textContent = tipText;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-calculators/sw.js');
+  }
+</script>
+
+</body>
+</html> 
