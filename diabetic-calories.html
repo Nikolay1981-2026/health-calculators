@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text x='50' y='72' font-size='68' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+<link rel="manifest" href="manifest.json">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKY6LFBJS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PKY6LFBJS');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diabetic Calorie Calculator 2026 — Daily Calories for Type 2 Diabetes</title>
+<meta name="description" content="Free diabetic calorie calculator for type 2 diabetes. Get your daily calorie target based on weight goals, activity level, and blood sugar control.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 620px;
+    width: 100%;
+  }
+  h1 { font-size: 26px; color: #1a2b4a; margin-bottom: 10px; text-align: center; line-height: 1.3; }
+  .subtitle { color: #6b7a99; font-size: 15px; text-align: center; margin-bottom: 30px; line-height: 1.5; }
+  .badge { display: inline-block; background: #e3f2fd; color: #1976d2; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; }
+  .center { text-align: center; }
+  label { display: block; font-size: 14px; color: #1a2b4a; margin-bottom: 6px; font-weight: 600; }
+  .hint { font-size: 12px; color: #8a96ab; margin-bottom: 6px; font-weight: normal; }
+  input, select { width: 100%; padding: 13px 15px; font-size: 16px; border: 2px solid #e0e6ef; border-radius: 10px; margin-bottom: 20px; background: #fff; transition: border 0.2s; }
+  input:focus, select:focus { outline: none; border-color: #1976d2; }
+  button { width: 100%; padding: 16px; font-size: 17px; font-weight: bold; color: #fff; background: linear-gradient(135deg, #1976d2, #0d47a1); border: none; border-radius: 10px; cursor: pointer; transition: transform 0.15s, box-shadow 0.2s; }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(25,118,210,0.4); }
+  .result { margin-top: 28px; padding: 24px; background: #e3f2fd; border-radius: 14px; display: none; border: 2px solid #bbdefb; }
+  .result.show { display: block; }
+  .result-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; color: #1a2b4a; }
+  .result-row.total { border-top: 2px solid #bbdefb; margin-top: 10px; padding-top: 16px; font-size: 20px; font-weight: bold; }
+  .result-row.total span:last-child { color: #1976d2; }
+  .tip { background: #fff3e0; border-left: 4px solid #e65100; padding: 14px; border-radius: 6px; margin-top: 16px; font-size: 14px; color: #5d4037; line-height: 1.6; }
+  .note { font-size: 13px; color: #8a96ab; margin-top: 20px; text-align: center; line-height: 1.6; }
+  .faq { background: #f7faff; border-radius: 16px; padding: 30px 28px; margin-top: 32px; border: 2px solid #e0e9ff; }
+  .faq-title { font-size: 22px; color: #1a2b4a; margin-bottom: 20px; text-align: center; font-weight: 800; }
+  .faq-item { padding: 16px 0; border-bottom: 1px solid #e0e9ff; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-item h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 8px; font-weight: 700; }
+  .faq-item p { font-size: 14px; color: #55617a; line-height: 1.65; margin: 0; }
+  .related { background: #fff; border-radius: 14px; padding: 24px 26px; margin-top: 28px; border: 2px dashed #b8c8ee; }
+  .related h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 14px; font-weight: 800; }
+  .related ul { list-style: none; padding: 0; }
+  .related li { font-size: 14px; color: #55617a; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid #e0e9ff; }
+  .related li:last-child { border-bottom: none; padding-bottom: 0; }
+  .related a { color: #1976d2; font-weight: 700; text-decoration: none; }
+  .related a:hover { text-decoration: underline; }
+  .back-link { display: block; text-align: center; margin-top: 24px; font-size: 14px; color: #1976d2; text-decoration: none; font-weight: 600; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center"><span class="badge">🩺 FOR DIABETICS</span></div>
+  <h1>Diabetic Calorie Calculator</h1>
+  <p class="subtitle">Find your daily calorie target with type 2 diabetes in mind. Built around weight goals and blood sugar control.</p>
+
+  <label for="age">Age — years</label>
+  <input type="number" id="age" placeholder="e.g. 45" value="45">
+
+  <label for="gender">Gender</label>
+  <select id="gender">
+    <option value="male">Male</option>
+    <option value="female" selected>Female</option>
+  </select>
+
+  <label for="weight">Weight — kg</label>
+  <input type="number" id="weight" placeholder="e.g. 85" value="85">
+
+  <label for="height">Height — cm</label>
+  <input type="number" id="height" placeholder="e.g. 170" value="170">
+
+  <label for="activity">Activity level</label>
+  <select id="activity">
+    <option value="1.2">Sedentary (little or no exercise)</option>
+    <option value="1.375">Lightly active (1-3 days/week)</option>
+    <option value="1.55" selected>Moderately active (3-5 days/week)</option>
+    <option value="1.725">Very active (6-7 days/week)</option>
+  </select>
+
+  <label for="goal">Goal</label>
+  <select id="goal">
+    <option value="lose">Lose weight (0.5 kg/week)</option>
+    <option value="maintain" selected>Maintain weight</option>
+    <option value="gain">Gain weight</option>
+  </select>
+
+  <button onclick="calculate()">Calculate My Daily Calories</button>
+
+  <div class="result" id="result">
+    <div class="result-row">
+      <span>BMR (Basal Metabolic Rate):</span>
+      <span id="bmr">—</span>
+    </div>
+    <div class="result-row">
+      <span>TDEE (maintenance):</span>
+      <span id="tdee">—</span>
+    </div>
+    <div class="result-row total">
+      <span>Daily calorie target:</span>
+      <span id="target">—</span>
+    </div>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="related">
+    <h3>Related calculators</h3>
+    <ul>
+      <li><a href="senior-bmi.html">Senior BMI Calculator</a> — accurate healthy ranges for people over 65</li>
+      <li><a href="low-carb.html">Low-Carb Carb Calculator</a> — how many carbs on keto or low-carb diets</li>
+      <li><a href="strength-protein.html">Strength Training Protein Calculator</a> — protein targets for muscle building</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Diabetic Calories — FAQ</h2>
+    <div class="faq-item">
+      <h3>How many calories should a diabetic eat per day?</h3>
+      <p>It depends on your weight goal, activity level, and blood sugar control. Most adults with type 2 diabetes do well on 1,600–2,200 calories per day if they want to maintain weight, or 1,400–1,800 if they want to lose weight. Use the calculator above for a personalized number.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do calories matter for blood sugar?</h3>
+      <p>Yes, but carbohydrates matter more. Calories determine weight, and weight loss significantly improves blood sugar control. But the type and amount of carbs you eat has a more direct effect on blood glucose. Our calculator gives you the calorie target — pair it with a carb-conscious diet.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is a low-calorie diet safe with diabetes?</h3>
+      <p>Mostly yes, but you should work with your doctor, especially if you take insulin or sulfonylureas. Very low-calorie diets (below 1,200 for women, 1,500 for men) should be supervised. Rapid weight loss can cause hypoglycemia in people on certain medications.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is the best diet for type 2 diabetes?</h3>
+      <p>Research supports several approaches: Mediterranean, low-carb, and plant-based diets all improve blood sugar. The best one is the one you can stick with. Focus on whole foods, fiber, protein, and healthy fats — and avoid sugary drinks.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I count calories with diabetes?</h3>
+      <p>Use a food app (MyFitnessPal, Lose It!) to log meals. Aim for consistent meal times and balanced plates: half vegetables, a quarter protein, a quarter complex carbs. Check your blood sugar 1–2 hours after meals to learn how your body responds.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can weight loss reverse type 2 diabetes?</h3>
+      <p>In many cases, yes — especially early after diagnosis. Losing 10–15% of body weight can put type 2 diabetes into remission for some people. The DiRECT trial found that 46% of participants achieved remission with an intensive weight loss program.</p>
+    </div>
+  </div>
+
+  <p class="note">This calculator provides an estimate for educational purposes only. It is not medical advice. Always consult your doctor or a registered dietitian before making changes to your diet, especially if you take insulin or other diabetes medications.</p>
+
+  <a href="index.html" class="back-link">← Back to all calculators</a>
+</div>
+
+<script>
+function calculate() {
+  const age = parseFloat(document.getElementById('age').value);
+  const gender = document.getElementById('gender').value;
+  const weight = parseFloat(document.getElementById('weight').value);
+  const height = parseFloat(document.getElementById('height').value);
+  const activity = parseFloat(document.getElementById('activity').value);
+  const goal = document.getElementById('goal').value;
+
+  if (!age || !weight || !height) {
+    alert('Please fill in age, weight, and height');
+    return;
+  }
+
+  let bmr;
+  if (gender === 'male') {
+    bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+  } else {
+    bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+  }
+
+  const tdee = bmr * activity;
+  let target = tdee;
+
+  if (goal === 'lose') target -= 500;
+  if (goal === 'gain') target += 300;
+  if (target < 1200) target = 1200;
+
+  const fmt = (n) => Math.round(n).toLocaleString('en-US') + ' kcal';
+
+  document.getElementById('bmr').textContent = fmt(bmr);
+  document.getElementById('tdee').textContent = fmt(tdee);
+  document.getElementById('target').textContent = fmt(target);
+
+  let tipText = '';
+  if (goal === 'lose') {
+    tipText = '⚠️ You are aiming for a 500 kcal deficit. This should lead to about 0.5 kg weight loss per week. Check with your doctor before starting, especially if you take insulin.';
+  } else if (goal === 'gain') {
+    tipText = '💡 You are aiming for a slight surplus. Focus on protein and strength training to gain muscle, not just weight.';
+  } else {
+    tipText = '✅ You are maintaining your current weight. Keep monitoring blood sugar and eating balanced meals.';
+  }
+
+  document.getElementById('tip').textContent = tipText;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-calculators/sw.js');
+  }
+</script>
+
+</body>
+</html>
