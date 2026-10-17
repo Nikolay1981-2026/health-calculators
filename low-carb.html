@@ -72,16 +72,16 @@
 <div class="container">
   <div class="center"><span class="badge">🥑 LOW CARB</span></div>
   <h1>Low-Carb Carb Calculator</h1>
-  <p class="subtitle">How many carbs should you eat on keto, paleo, or low-carb? Get your target based on goals and activity level.</p>
+  <p class="subtitle">How many carbs should you eat on keto, paleo, or low-carb? Get your target based on body weight, goals, and activity level.</p>
 
   <label for="weight">Body weight — kg</label>
   <input type="number" id="weight" placeholder="e.g. 75" value="75">
 
   <label for="diet">Type of low-carb diet</label>
   <select id="diet">
-    <option value="keto">Strict Keto (under 20g net carbs)</option>
-    <option value="moderate" selected>Moderate Low-Carb (50–100g)</option>
-    <option value="liberal">Liberal Low-Carb (100–150g)</option>
+    <option value="keto">Strict Keto (very low carb)</option>
+    <option value="moderate" selected>Moderate Low-Carb</option>
+    <option value="liberal">Liberal Low-Carb</option>
   </select>
 
   <label for="activity">Activity level</label>
@@ -95,8 +95,8 @@
 
   <div class="result" id="result">
     <div class="result-row">
-      <span>Diet type:</span>
-      <span id="dietType">—</span>
+      <span>Base carbs for your weight:</span>
+      <span id="baseCarbs">—</span>
     </div>
     <div class="result-row">
       <span>Activity adjustment:</span>
@@ -138,7 +138,7 @@
     </div>
     <div class="faq-item">
       <h3>How do I avoid the "keto flu"?</h3>
-     <p>The keto flu (fatigue, headache, irritability) happens in the first week as your body adapts. Prevent it by drinking more water and adding electrolytes (sodium, potassium, magnesium). See our <a href="athlete-water.html">Athlete Water Calculator</a> for hydration.</p>
+      <p>The keto flu (fatigue, headache, irritability) happens in the first week as your body adapts. Prevent it by drinking more water and adding electrolytes (sodium, potassium, magnesium). See our <a href="athlete-water.html">Athlete Water Calculator</a> for hydration.</p>
     </div>
   </div>
 
@@ -158,44 +158,42 @@ function calculate() {
     return;
   }
 
-  let carbs = 0;
-  let dietName = '';
+  let multiplier = 1.0;
+  if (diet === 'keto') multiplier = 0.4;
+  if (diet === 'liberal') multiplier = 1.5;
 
-  if (diet === 'keto') {
-    carbs = 20;
-    dietName = 'Strict Keto';
-  } else if (diet === 'moderate') {
-    carbs = 75;
-    dietName = 'Moderate Low-Carb';
-  } else {
-    carbs = 125;
-    dietName = 'Liberal Low-Carb';
-  }
+  let baseCarbs = weight * multiplier;
+  let activityAdjustment = 0;
 
-  let adjustment = 'None';
   if (activity === 'active') {
-    carbs += 20;
-    adjustment = '+20g (active)';
+    activityAdjustment = baseCarbs * 0.1;
   } else if (activity === 'sedentary') {
-    carbs -= 10;
-    adjustment = '-10g (sedentary)';
+    activityAdjustment = -(baseCarbs * 0.1);
   }
 
-  if (carbs < 15) carbs = 15;
+  let finalCarbs = baseCarbs + activityAdjustment;
+
+  if (diet === 'keto' && finalCarbs > 50) finalCarbs = 50;
+  if (finalCarbs < 15) finalCarbs = 15;
 
   const fmt = (n) => Math.round(n) + ' g';
 
-  document.getElementById('dietType').textContent = dietName;
-  document.getElementById('adjustment').textContent = adjustment;
-  document.getElementById('carbs').textContent = fmt(carbs);
+  document.getElementById('baseCarbs').textContent = fmt(baseCarbs);
+  
+  let adjText = 'None';
+  if (activityAdjustment > 0) adjText = '+' + fmt(activityAdjustment);
+  if (activityAdjustment < 0) adjText = fmt(activityAdjustment);
+  document.getElementById('adjustment').textContent = adjText;
+  
+  document.getElementById('carbs').textContent = fmt(finalCarbs);
 
   let tipText = '';
   if (diet === 'keto') {
-    tipText = '⚠️ Keto requires strict carb control. Aim for ' + fmt(carbs) + ' net carbs per day. Focus on fats (avocado, olive oil, nuts) and moderate protein.';
+    tipText = '⚠️ Keto requires strict carb control. Aim for ' + fmt(finalCarbs) + ' net carbs per day. Focus on fats (avocado, olive oil, nuts) and moderate protein.';
   } else if (diet === 'moderate') {
-    tipText = '💡 Moderate low-carb is flexible. Aim for ' + fmt(carbs) + ' net carbs per day. Good for weight loss without strict ketosis.';
+    tipText = '💡 Moderate low-carb is flexible. Aim for ' + fmt(finalCarbs) + ' net carbs per day. Good for weight loss without strict ketosis.';
   } else {
-    tipText = '✅ Liberal low-carb allows more flexibility. Aim for ' + fmt(carbs) + ' net carbs per day. Great for long-term sustainability.';
+    tipText = '✅ Liberal low-carb allows more flexibility. Aim for ' + fmt(finalCarbs) + ' net carbs per day. Great for long-term sustainability.';
   }
 
   document.getElementById('tip').textContent = tipText;
@@ -210,4 +208,4 @@ function calculate() {
 </script>
 
 </body>
-</html> 
+</html>
