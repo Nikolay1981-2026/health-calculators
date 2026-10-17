@@ -1,0 +1,19 @@
+{
+  "name": "Free Health Calculators for Real Needs",
+  "short_name": "Health Calc",
+  "description": "Specialized health calculators for diabetics, seniors, athletes, vegans, pregnant women, and more.",
+  "start_url": "/health-calculators/index.html",
+  "scope": "/health-calculators/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#134e5e",
+  "theme_color": "#2e7d32",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
