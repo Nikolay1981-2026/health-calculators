@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text x='50' y='72' font-size='68' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+<link rel="manifest" href="manifest.json">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKY6LFBJS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PKY6LFBJS');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athlete Water Calculator 2026 — How Much Water Do You Need?</title>
+<meta name="description" content="Calculate your exact water needs based on workout intensity, duration, sweat rate, and climate. Stay hydrated and perform at your best.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e65100 0%, #ff8f00 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 620px;
+    width: 100%;
+  }
+  h1 { font-size: 26px; color: #1a2b4a; margin-bottom: 10px; text-align: center; line-height: 1.3; }
+  .subtitle { color: #6b7a99; font-size: 15px; text-align: center; margin-bottom: 30px; line-height: 1.5; }
+  .badge { display: inline-block; background: #fff3e0; color: #e65100; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; }
+  .center { text-align: center; }
+  label { display: block; font-size: 14px; color: #1a2b4a; margin-bottom: 6px; font-weight: 600; }
+  .hint { font-size: 12px; color: #8a96ab; margin-bottom: 6px; font-weight: normal; }
+  input, select { width: 100%; padding: 13px 15px; font-size: 16px; border: 2px solid #e0e6ef; border-radius: 10px; margin-bottom: 20px; background: #fff; transition: border 0.2s; }
+  input:focus, select:focus { outline: none; border-color: #e65100; }
+  button { width: 100%; padding: 16px; font-size: 17px; font-weight: bold; color: #fff; background: linear-gradient(135deg, #ff8f00, #e65100); border: none; border-radius: 10px; cursor: pointer; transition: transform 0.15s, box-shadow 0.2s; }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(230,81,0,0.4); }
+  .result { margin-top: 28px; padding: 24px; background: #fff8e1; border-radius: 14px; display: none; border: 2px solid #ffecb3; }
+  .result.show { display: block; }
+  .result-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; color: #1a2b4a; }
+  .result-row.total { border-top: 2px solid #ffecb3; margin-top: 10px; padding-top: 16px; font-size: 20px; font-weight: bold; }
+  .result-row.total span:last-child { color: #e65100; }
+  .tip { background: #fff3e0; border-left: 4px solid #e65100; padding: 14px; border-radius: 6px; margin-top: 16px; font-size: 14px; color: #bf360c; line-height: 1.6; }
+  .note { font-size: 13px; color: #8a96ab; margin-top: 20px; text-align: center; line-height: 1.6; }
+  .faq { background: #fff8e1; border-radius: 16px; padding: 30px 28px; margin-top: 32px; border: 2px solid #ffecb3; }
+  .faq-title { font-size: 22px; color: #1a2b4a; margin-bottom: 20px; text-align: center; font-weight: 800; }
+  .faq-item { padding: 16px 0; border-bottom: 1px solid #ffecb3; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-item h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 8px; font-weight: 700; }
+  .faq-item p { font-size: 14px; color: #55617a; line-height: 1.65; margin: 0; }
+  .related { background: #fff; border-radius: 14px; padding: 24px 26px; margin-top: 28px; border: 2px dashed #ffcc80; }
+  .related h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 14px; font-weight: 800; }
+  .related ul { list-style: none; padding: 0; }
+  .related li { font-size: 14px; color: #55617a; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid #ffecb3; }
+  .related li:last-child { border-bottom: none; padding-bottom: 0; }
+  .related a { color: #e65100; font-weight: 700; text-decoration: none; }
+  .related a:hover { text-decoration: underline; }
+  .back-link { display: block; text-align: center; margin-top: 24px; font-size: 14px; color: #e65100; text-decoration: none; font-weight: 600; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center"><span class="badge">🏃 FOR ATHLETES</span></div>
+  <h1>Athlete Water Calculator</h1>
+  <p class="subtitle">How much water do you really need? This calculator factors in workout intensity, duration, sweat rate, and climate.</p>
+
+  <label for="weight">Body weight — kg</label>
+  <input type="number" id="weight" placeholder="e.g. 75" value="75">
+
+  <label for="duration">Workout duration — minutes</label>
+  <input type="number" id="duration" placeholder="e.g. 60" value="60">
+
+  <label for="intensity">Workout intensity</label>
+  <select id="intensity">
+    <option value="light">Light (walking, yoga)</option>
+    <option value="moderate" selected>Moderate (jogging, cycling)</option>
+    <option value="intense">Intense (running, HIIT)</option>
+  </select>
+
+  <label for="climate">Climate</label>
+  <select id="climate">
+    <option value="cool">Cool (below 15°C)</option>
+    <option value="temperate" selected>Temperate (15–25°C)</option>
+    <option value="hot">Hot (above 25°C)</option>
+  </select>
+
+  <button onclick="calculate()">Calculate My Water Needs</button>
+
+  <div class="result" id="result">
+    <div class="result-row">
+      <span>Baseline water (rest):</span>
+      <span id="baseline">—</span>
+    </div>
+    <div class="result-row">
+      <span>Workout water loss:</span>
+      <span id="workout">—</span>
+    </div>
+    <div class="result-row total">
+      <span>Total daily water:</span>
+      <span id="total">—</span>
+    </div>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="related">
+    <h3>Related calculators</h3>
+    <ul>
+      <li><a href="strength-protein.html">Strength Training Protein Calculator</a> — protein targets for muscle building</li>
+      <li><a href="hypertension-heart-rate.html">Hypertension Heart Rate Calculator</a> — safe exercise zones for high blood pressure</li>
+      <li><a href="vegan-macros.html">Vegan Macro Calculator</a> — personalized macros for plant-based diets</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Athlete Water — FAQ</h2>
+    <div class="faq-item">
+      <h3>How much water should an athlete drink per day?</h3>
+      <p>Most athletes need 2.5–3.5 liters of water per day, but this varies widely depending on body weight, workout intensity, duration, and climate. Use the calculator above for a personalized number.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Should I drink water before, during, or after exercise?</h3>
+      <p>All three. Drink 500 ml about 2 hours before exercise, 150–250 ml every 15–20 minutes during exercise, and 500 ml within 30 minutes after. For workouts over 60 minutes, consider an electrolyte drink.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What are the signs of dehydration?</h3>
+      <p>Dark yellow urine, thirst, dry mouth, fatigue, headache, and reduced performance. A simple check: if your urine is pale yellow, you're well hydrated. If it's dark yellow or amber, drink more water.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can you drink too much water?</h3>
+      <p>Yes — it's called hyponatremia, and it's dangerous. Drinking excessive amounts of water without electrolytes dilutes sodium in the blood. Endurance athletes are at risk. Drink to thirst and include electrolytes for long workouts.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need sports drinks or just water?</h3>
+      <p>For workouts under 60 minutes, water is enough. For longer or intense workouts (especially in heat), a sports drink with electrolytes and carbs helps maintain performance and prevents hyponatremia.</p>
+    </div>
+  </div>
+
+  <p class="note">This calculator provides an estimate for educational purposes only. It is not medical workout advice. Always consult a sports medicine professional or registered dietitian for personalized hydration guidance.</p>
+
+  <a href="index.html" class="back-link">← Back to all calculators</a>
+</div>
+
+<script>
+function calculate() {
+  const weight = parseFloat(document.getElementById('weight').value);
+  const duration = parseFloat(document.getElementById('duration').value);
+  const intensity = document.getElementById('intensity').value;
+  const climate = document.getElementById('climate').value;
+
+  if (!weight || !duration) {
+    alert('Please fill in weight and duration');
+    return;
+  }
+
+  const baseline = weight * 35;
+
+  let sweatRate = 0.5;
+  if (intensity === 'moderate') sweatRate = 1.0;
+  if (intensity === 'intense') sweatRate = 1.5;
+
+  let climateMultiplier = 1.0;
+  if (climate === 'cool') climateMultiplier = 0.8;
+  if (climate === 'hot') climateMultiplier = 1.4;
+
+  const workoutLoss = duration * sweatRate * climateMultiplier;
+  const total = baseline + workoutLoss;
+
+  const fmt = (n) => Math.round(n).toLocaleString('en-US') + ' ml';
+
+  document.getElementById('baseline').textContent = fmt(baseline);
+  document.getElementById('workout').textContent = fmt(workoutLoss);
+  document.getElementById('total').textContent = fmt(total);
+
+  const liters = (total / 1000).toFixed(1);
+  let tipText = '💡 Your total daily water target is about ' + liters + ' liters. ';
+
+  if (intensity === 'intense' && duration > 60) {
+    tipText += 'For long intense workouts, add electrolytes (sodium, potassium) — not just water.';
+  } else if (climate === 'hot') {
+    tipText += 'In hot climates, drink more than you think you need and watch your urine color.';
+  } else {
+    tipText += 'Sip throughout the day and drink extra before, during, and after workouts.';
+  }
+
+  document.getElementById('tip').textContent = tipText;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-calculators/sw.js');
+  }
+</script>
+
+</body>
+</html>
