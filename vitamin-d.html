@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text x='50' y='72' font-size='68' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+<link rel="manifest" href="manifest.json">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKY6LFBJS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PKY6LFBJS');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitamin D Calculator 2026 — How Much Do You Need by Region?</title>
+<meta name="description" content="Calculate your vitamin D needs based on latitude, skin type, and sun exposure. Find out if you need supplements based on where you live.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f57f17 0%, #f9a825 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 620px;
+    width: 100%;
+  }
+  h1 { font-size: 26px; color: #1a2b4a; margin-bottom: 10px; text-align: center; line-height: 1.3; }
+  .subtitle { color: #6b7a99; font-size: 15px; text-align: center; margin-bottom: 30px; line-height: 1.5; }
+  .badge { display: inline-block; background: #fff8e1; color: #f9a825; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; }
+  .center { text-align: center; }
+  label { display: block; font-size: 14px; color: #1a2b4a; margin-bottom: 6px; font-weight: 600; }
+  .hint { font-size: 12px; color: #8a96ab; margin-bottom: 6px; font-weight: normal; }
+  input, select { width: 100%; padding: 13px 15px; font-size: 16px; border: 2px solid #e0e6ef; border-radius: 10px; margin-bottom: 20px; background: #fff; transition: border 0.2s; }
+  input:focus, select:focus { outline: none; border-color: #f9a825; }
+  button { width: 100%; padding: 16px; font-size: 17px; font-weight: bold; color: #fff; background: linear-gradient(135deg, #f9a825, #f57f17); border: none; border-radius: 10px; cursor: pointer; transition: transform 0.15s, box-shadow 0.2s; }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(249,168,37,0.4); }
+  .result { margin-top: 28px; padding: 24px; background: #fff8e1; border-radius: 14px; display: none; border: 2px solid #ffecb3; }
+  .result.show { display: block; }
+  .result-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; color: #1a2b4a; }
+  .result-row.total { border-top: 2px solid #ffecb3; margin-top: 10px; padding-top: 16px; font-size: 20px; font-weight: bold; }
+  .result-row.total span:last-child { color: #f57f17; }
+  .tip { background: #fff3e0; border-left: 4px solid #e65100; padding: 14px; border-radius: 6px; margin-top: 16px; font-size: 14px; color: #5d4037; line-height: 1.6; }
+  .note { font-size: 13px; color: #8a96ab; margin-top: 20px; text-align: center; line-height: 1.6; }
+  .faq { background: #fff8e1; border-radius: 16px; padding: 30px 28px; margin-top: 32px; border: 2px solid #ffecb3; }
+  .faq-title { font-size: 22px; color: #1a2b4a; margin-bottom: 20px; text-align: center; font-weight: 800; }
+  .faq-item { padding: 16px 0; border-bottom: 1px solid #ffecb3; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-item h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 8px; font-weight: 700; }
+  .faq-item p { font-size: 14px; color: #55617a; line-height: 1.65; margin: 0; }
+  .related { background: #fff; border-radius: 14px; padding: 24px 26px; margin-top: 28px; border: 2px dashed #ffe082; }
+  .related h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 14px; font-weight: 800; }
+  .related ul { list-style: none; padding: 0; }
+  .related li { font-size: 14px; color: #55617a; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid #ffecb3; }
+  .related li:last-child { border-bottom: none; padding-bottom: 0; }
+  .related a { color: #f57f17; font-weight: 700; text-decoration: none; }
+  .related a:hover { text-decoration: underline; }
+  .back-link { display: block; text-align: center; margin-top: 24px; font-size: 14px; color: #f57f17; text-decoration: none; font-weight: 600; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center"><span class="badge">☀️ BY REGION</span></div>
+  <h1>Vitamin D Calculator</h1>
+  <p class="subtitle">How much vitamin D do you need based on where you live and how much sun you get? Personalized by latitude and skin type.</p>
+
+  <label for="latitude">Your latitude (approximate)</label>
+  <select id="latitude">
+    <option value="tropical">Tropical (0° – 23°)</option>
+    <option value="subtropical">Subtropical (23° – 35°)</option>
+    <option value="temperate" selected>Temperate (35° – 50°)</option>
+    <option value="northern">Northern (above 50°)</option>
+  </select>
+
+  <label for="skin">Skin type</label>
+  <select id="skin">
+    <option value="light">Light (burns easily)</option>
+    <option value="medium" selected>Medium (tans, sometimes burns)</option>
+    <option value="dark">Dark (rarely burns)</option>
+  </select>
+
+  <label for="sun">Average daily sun exposure</label>
+  <select id="sun">
+    <option value="low">Low (under 15 min)</option>
+    <option value="moderate" selected>Moderate (15–30 min)</option>
+    <option value="high">High (over 30 min)</option>
+  </select>
+
+  <button onclick="calculate()">Calculate My Vitamin D Needs</button>
+
+  <div class="result" id="result">
+    <div class="result-row">
+      <span>Sun exposure factor:</span>
+      <span id="factor">—</span>
+    </div>
+    <div class="result-row total">
+      <span>Recommended daily Vitamin D:</span>
+      <span id="dose">—</span>
+    </div>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="related">
+    <h3>Related calculators</h3>
+    <ul>
+      <li><a href="senior-bmi.html">Senior BMI Calculator</a> — older adults often need more Vitamin D</li>
+      <li><a href="pregnancy-calories.html">Pregnancy Calorie Calculator</a> — Vitamin D needs during pregnancy</li>
+      <li><a href="vegan-macros.html">Vegan Macro Calculator</a> — if you follow a plant-based diet</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Vitamin D — FAQ</h2>
+    <div class="faq-item">
+      <h3>How much vitamin D do I need per day?</h3>
+      <p>The general recommendation is 600–800 IU (15–20 mcg) per day for most adults. People over 70 need 800 IU (20 mcg). But if you live in northern latitudes or get little sun, you may need more — up to 2000 IU (50 mcg) daily.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I get enough vitamin D from the sun?</h3>
+      <p>In summer, yes — about 15–30 minutes of midday sun on exposed skin, several times a week. But in winter, most people above 35° latitude cannot produce vitamin D from sun exposure. That's why supplements are often needed.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Who is at risk of vitamin D deficiency?</h3>
+      <p>People with dark skin, older adults, those who stay indoors, people living in northern latitudes, and anyone who wears full-body coverage for religious or cultural reasons. Symptoms include fatigue, bone pain, and frequent illness.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I take too much vitamin D?</h3>
+      <p>Yes. Vitamin D is fat-soluble, so it builds up in the body. The safe upper limit for adults is 4,000 IU (100 mcg) per day. Higher doses should only be taken under medical supervision after a blood test.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Should I test my vitamin D levels?</h3>
+      <p>If you suspect deficiency, ask your doctor for a 25-hydroxyvitamin D blood test. It's the most accurate way to know your levels and adjust your dose. Don't guess — especially before taking high doses.</p>
+    </div>
+  </div>
+
+  <p class="note">This calculator provides an estimate for educational purposes only. It is not medical advice. Always consult your doctor before starting vitamin D supplements, especially at high doses.</p>
+
+  <a href="index.html" class="back-link">← Back to all calculators</a>
+</div>
+
+<script>
+function calculate() {
+  const latitude = document.getElementById('latitude').value;
+  const skin = document.getElementById('skin').value;
+  const sun = document.getElementById('sun').value;
+
+  let baseDose = 600;
+
+  if (latitude === 'temperate') baseDose = 1000;
+  if (latitude === 'northern') baseDose = 1500;
+
+  if (skin === 'dark') baseDose += 400;
+  if (skin === 'medium') baseDose += 200;
+
+  if (sun === 'low') baseDose += 400;
+  if (sun === 'high') baseDose -= 200;
+
+  if (baseDose < 400) baseDose = 400;
+  if (baseDose > 4000) baseDose = 4000;
+
+  const factorText = skin + ' skin, ' + latitude + ' latitude, ' + sun + ' sun';
+
+  const fmt = (n) => n.toLocaleString('en-US') + ' IU';
+
+  document.getElementById('factor').textContent = factorText;
+  document.getElementById('dose').textContent = fmt(baseDose);
+
+  let tipText = '';
+  if (latitude === 'northern') {
+    tipText = '⚠️ In northern latitudes, winter sun cannot produce vitamin D. Supplements are usually necessary from October to March.';
+  } else if (skin === 'dark') {
+    tipText = '💡 Darker skin requires longer sun exposure to produce the same amount of vitamin D. Your dose is adjusted higher to account for this.';
+  } else if (sun === 'low') {
+    tipText = '💡 Low sun exposure means you should rely more on food (fatty fish, egg yolks, fortified milk) and supplements.';
+  } else {
+    tipText = '✅ Your lifestyle supports vitamin D production. Keep up regular sun exposure and consider testing your levels annually.';
+  }
+
+  document.getElementById('tip').textContent = tipText;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-calculators/sw.js');
+  }
+</script>
+
+</body>
+</html>
