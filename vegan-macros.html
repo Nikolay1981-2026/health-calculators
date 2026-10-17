@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text x='50' y='72' font-size='68' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+<link rel="manifest" href="manifest.json">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKY6LFBJS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PKY6LFBJS');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vegan Macro Calculator 2026 — Carbs, Fat & Protein for Plant-Based Diets</title>
+<meta name="description" content="Calculate your macros for a vegan diet. Plant-based protein is different — get personalized carb, fat, and protein targets to stay strong on a vegan lifestyle.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1b5e20 0%, #388e3c 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 620px;
+    width: 100%;
+  }
+  h1 { font-size: 26px; color: #1a2b4a; margin-bottom: 10px; text-align: center; line-height: 1.3; }
+  .subtitle { color: #6b7a99; font-size: 15px; text-align: center; margin-bottom: 30px; line-height: 1.5; }
+  .badge { display: inline-block; background: #e8f5e9; color: #388e3c; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; }
+  .center { text-align: center; }
+  label { display: block; font-size: 14px; color: #1a2b4a; margin-bottom: 6px; font-weight: 600; }
+  .hint { font-size: 12px; color: #8a96ab; margin-bottom: 6px; font-weight: normal; }
+  input, select { width: 100%; padding: 13px 15px; font-size: 16px; border: 2px solid #e0e6ef; border-radius: 10px; margin-bottom: 20px; background: #fff; transition: border 0.2s; }
+  input:focus, select:focus { outline: none; border-color: #388e3c; }
+  button { width: 100%; padding: 16px; font-size: 17px; font-weight: bold; color: #fff; background: linear-gradient(135deg, #388e3c, #1b5e20); border: none; border-radius: 10px; cursor: pointer; transition: transform 0.15s, box-shadow 0.2s; }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(56,142,60,0.4); }
+  .result { margin-top: 28px; padding: 24px; background: #f1f8e9; border-radius: 14px; display: none; border: 2px solid #c8e6c9; }
+  .result.show { display: block; }
+  .result-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; color: #1a2b4a; }
+  .result-row.total { border-top: 2px solid #c8e6c9; margin-top: 10px; padding-top: 16px; font-size: 20px; font-weight: bold; }
+  .result-row.total span:last-child { color: #388e3c; }
+  .tip { background: #e8f5e9; border-left: 4px solid #388e3c; padding: 14px; border-radius: 6px; margin-top: 16px; font-size: 14px; color: #1b5e20; line-height: 1.6; }
+  .note { font-size: 13px; color: #8a96ab; margin-top: 20px; text-align: center; line-height: 1.6; }
+  .faq { background: #f1f8e9; border-radius: 16px; padding: 30px 28px; margin-top: 32px; border: 2px solid #c8e6c9; }
+  .faq-title { font-size: 22px; color: #1a2b4a; margin-bottom: 20px; text-align: center; font-weight: 800; }
+  .faq-item { padding: 16px 0; border-bottom: 1px solid #c8e6c9; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-item h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 8px; font-weight: 700; }
+  .faq-item p { font-size: 14px; color: #55617a; line-height: 1.65; margin: 0; }
+.related { background: #fff; border-radius: 14px; padding: 24px 26px; margin-top: 28px; border: 2px dashed #a5d6a7; }
+  .related h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 14px; font-weight: 800; }
+  .related ul { list-style: none; padding: 0; }
+  .related li { font-size: 14px; color: #55617a; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid #c8e6c9; }
+  .related li:last-child { border-bottom: none; padding-bottom: 0; }
+  .related a { color: #388e3c; font-weight: 700; text-decoration: none; }
+  .related a:hover { text-decoration: underline; }
+  .back-link { display: block; text-align: center; margin-top: 24px; font-size: 14px; color: #388e3c; text-decoration: none; font-weight: 600; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center"><span class="badge">🌱 FOR VEGANS</span></div>
+  <h1>Vegan Macro Calculator</h1>
+  <p class="subtitle">Plant-based macros require more thought — especially protein. Get your personalized carb, fat, and protein targets for vegan diets.</p>
+
+  <label for="weight">Weight — kg</label>
+  <input type="number" id="weight" placeholder="e.g. 70" value="70">
+
+  <label for="height">Height — cm</label>
+  <input type="number" id="height" placeholder="e.g. 175" value="175">
+
+  <label for="age">Age — years</label>
+  <input type="number" id="age" placeholder="e.g. 30" value="30">
+
+  <label for="gender">Gender</label>
+  <select id="gender">
+    <option value="male">Male</option>
+    <option value="female" selected>Female</option>
+  </select>
+
+  <label for="activity">Activity level</label>
+  <select id="activity">
+    <option value="1.2">Sedentary</option>
+    <option value="1.375">Lightly active</option>
+    <option value="1.55" selected>Moderately active</option>
+    <option value="1.725">Very active</option>
+  </select>
+
+  <label for="goal">Goal</label>
+  <select id="goal">
+    <option value="lose">Lose fat</option>
+    <option value="maintain" selected>Maintain</option>
+    <option value="gain">Build muscle</option>
+  </select>
+
+  <button onclick="calculate()">Calculate My Vegan Macros</button>
+
+  <div class="result" id="result">
+    <div class="result-row">
+      <span>Daily Calories:</span>
+      <span id="cals">—</span>
+    </div>
+    <div class="result-row">
+      <span>Protein (plant-based):</span>
+      <span id="protein">—</span>
+    </div>
+    <div class="result-row">
+      <span>Fat:</span>
+      <span id="fat">—</span>
+    </div>
+    <div class="result-row total">
+      <span>Carbs:</span>
+      <span id="carbs">—</span>
+    </div>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="related">
+    <h3>Related calculators</h3>
+    <ul>
+      <li><a href="strength-protein.html">Strength Training Protein Calculator</a> — how much protein for muscle growth</li>
+      <li><a href="low-carb.html">Low-Carb Carb Calculator</a> — if you want to lower your carb intake</li>
+      <li><a href="athlete-water.html">Athlete Water Calculator</a> — hydration for active vegans</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Vegan Macros — FAQ</h2>
+    <div class="faq-item">
+      <h3>How much protein do vegans need?</h3>
+      <p>Vegans need slightly more protein than omnivores because plant proteins are less bioavailable. Aim for 1.4–2.0 g per kg of body weight. Good vegan sources: lentils, tofu, tempeh, seitan, chickpeas, and hemp seeds.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Are carbs bad on a vegan diet?</h3>
+      <p>No. Whole-food carbs (beans, lentils, oats, brown rice, fruit) are excellent — they provide fiber, vitamins, and sustained energy. Refined carbs (white bread, sugar) are the ones to limit.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I get enough fat as a vegan?</h3>
+      <p>Easy: nuts, seeds, avocado, olives, coconut, and plant oils. These are the best fat sources. Omega-3s are important too — add flaxseeds, chia seeds, or walnuts daily.</p>
+</div>
+    <div class="faq-item">
+      <h3>Should I supplement on a vegan diet?</h3>
+      <p>Yes. Vitamin B12 is essential (fortified foods or supplements). Vitamin D, iron, zinc, and omega-3s may also need attention. Check our <a href="vitamin-d.html">Vitamin D Calculator</a> for personalized sun/supplement guidance.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I build muscle on a vegan diet?</h3>
+      <p>Absolutely. Plant protein works just as well for muscle growth when you eat enough of it. Focus on soy, legumes, and grains. Our <a href="strength-protein.html">Strength Training Protein Calculator</a> can help you find the right amount.</p>
+    </div>
+  </div>
+
+  <p class="note">This calculator provides an estimate for educational purposes only. It is not medical advice. Always consult a registered dietitian or nutritionist before making major dietary changes, especially on a vegan diet.</p>
+
+  <a href="index.html" class="back-link">← Back to all calculators</a>
+</div>
+
+<script>
+function calculate() {
+  const weight = parseFloat(document.getElementById('weight').value);
+  const height = parseFloat(document.getElementById('height').value);
+  const age = parseFloat(document.getElementById('age').value);
+  const gender = document.getElementById('gender').value;
+  const activity = parseFloat(document.getElementById('activity').value);
+  const goal = document.getElementById('goal').value;
+
+  if (!weight || !height || !age) {
+    alert('Please fill in weight, height, and age');
+    return;
+  }
+
+  let bmr;
+  if (gender === 'male') {
+    bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+  } else {
+    bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+  }
+
+  const tdee = bmr * activity;
+  let targetCals = tdee;
+
+  if (goal === 'lose') targetCals -= 400;
+  if (goal === 'gain') targetCals += 300;
+  if (targetCals < 1200) targetCals = 1200;
+
+  let proteinPerKg = 1.4;
+  if (goal === 'gain') proteinPerKg = 1.8;
+  if (goal === 'lose') proteinPerKg = 1.6;
+
+  const proteinGrams = weight * proteinPerKg;
+  const proteinCals = proteinGrams * 4;
+
+  const fatCals = targetCals * 0.25;
+  const fatGrams = fatCals / 9;
+
+  const carbCals = targetCals - proteinCals - fatCals;
+  const carbGrams = carbCals / 4;
+
+  const fmt = (n) => Math.round(n).toLocaleString('en-US');
+
+  document.getElementById('cals').textContent = fmt(targetCals) + ' kcal';
+  document.getElementById('protein').textContent = fmt(proteinGrams) + ' g';
+  document.getElementById('fat').textContent = fmt(fatGrams) + ' g';
+  document.getElementById('carbs').textContent = fmt(carbGrams) + ' g';
+
+  let tipText = '';
+  if (goal === 'gain') {
+    tipText = '💪 For muscle gain, prioritize plant proteins like soy, lentils, and hemp. Combine with strength training.';
+  } else if (goal === 'lose') {
+    tipText = '⚠️ A slight deficit helps you lose fat while preserving muscle. Keep protein high to prevent muscle loss.';
+  } else {
+    tipText = '✅ You are maintaining. Focus on whole foods, fiber, and B12 supplementation.';
+  }
+
+  document.getElementById('tip').textContent = tipText;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-calculators/sw.js');
+  }
+</script>
+
+</body>
+</html>
