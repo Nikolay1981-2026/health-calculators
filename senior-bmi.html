@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text x='50' y='72' font-size='68' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+<link rel="manifest" href="manifest.json">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKY6LFBJS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PKY6LFBJS');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senior BMI Calculator 2026 — Healthy BMI for Adults Over 65</title>
+<meta name="description" content="Free BMI calculator for seniors. Standard BMI charts are inaccurate for people over 65. Use senior-specific healthy ranges that account for muscle loss.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 620px;
+    width: 100%;
+  }
+  h1 { font-size: 26px; color: #1a2b4a; margin-bottom: 10px; text-align: center; line-height: 1.3; }
+  .subtitle { color: #6b7a99; font-size: 15px; text-align: center; margin-bottom: 30px; line-height: 1.5; }
+  .badge { display: inline-block; background: #f3e5f5; color: #7b1fa2; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; }
+  .center { text-align: center; }
+  label { display: block; font-size: 14px; color: #1a2b4a; margin-bottom: 6px; font-weight: 600; }
+  .hint { font-size: 12px; color: #8a96ab; margin-bottom: 6px; font-weight: normal; }
+  input, select { width: 100%; padding: 13px 15px; font-size: 16px; border: 2px solid #e0e6ef; border-radius: 10px; margin-bottom: 20px; background: #fff; transition: border 0.2s; }
+  input:focus, select:focus { outline: none; border-color: #7b1fa2; }
+  button { width: 100%; padding: 16px; font-size: 17px; font-weight: bold; color: #fff; background: linear-gradient(135deg, #7b1fa2, #4a148c); border: none; border-radius: 10px; cursor: pointer; transition: transform 0.15s, box-shadow 0.2s; }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(123,31,162,0.4); }
+  .result { margin-top: 28px; padding: 24px; background: #faf5fc; border-radius: 14px; display: none; border: 2px solid #eadcf2; }
+  .result.show { display: block; }
+  .result-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; color: #1a2b4a; }
+  .result-row.total { border-top: 2px solid #eadcf2; margin-top: 10px; padding-top: 16px; font-size: 20px; font-weight: bold; }
+  .result-row.total span:last-child { color: #7b1fa2; }
+  .tip { background: #f3e5f5; border-left: 4px solid #7b1fa2; padding: 14px; border-radius: 6px; margin-top: 16px; font-size: 14px; color: #4a148c; line-height: 1.6; }
+  .note { font-size: 13px; color: #8a96ab; margin-top: 20px; text-align: center; line-height: 1.6; }
+  .faq { background: #faf5fc; border-radius: 16px; padding: 30px 28px; margin-top: 32px; border: 2px solid #eadcf2; }
+  .faq-title { font-size: 22px; color: #1a2b4a; margin-bottom: 20px; text-align: center; font-weight: 800; }
+  .faq-item { padding: 16px 0; border-bottom: 1px solid #eadcf2; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-item h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 8px; font-weight: 700; }
+  .faq-item p { font-size: 14px; color: #55617a; line-height: 1.65; margin: 0; }
+  .related { background: #fff; border-radius: 14px; padding: 24px 26px; margin-top: 28px; border: 2px dashed #d4c4e0; }
+  .related h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 14px; font-weight: 800; }
+  .related ul { list-style: none; padding: 0; }
+  .related li { font-size: 14px; color: #55617a; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid #eadcf2; }
+  .related li:last-child { border-bottom: none; padding-bottom: 0; }
+  .related a { color: #7b1fa2; font-weight: 700; text-decoration: none; }
+  .related a:hover { text-decoration: underline; }
+  .back-link { display: block; text-align: center; margin-top: 24px; font-size: 14px; color: #7b1fa2; text-decoration: none; font-weight: 600; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center"><span class="badge">👴 FOR SENIORS</span></div>
+  <h1>Senior BMI Calculator</h1>
+  <p class="subtitle">Standard BMI charts aren't accurate for people over 65. This calculator uses senior-specific healthy ranges and considers muscle loss.</p>
+
+  <label for="weight">Weight — kg</label>
+  <input type="number" id="weight" placeholder="e.g. 75" value="75">
+
+  <label for="height">Height — cm</label>
+  <input type="number" id="height" placeholder="e.g. 165" value="165">
+
+  <label for="age">Age — years</label>
+  <input type="number" id="age" placeholder="e.g. 70" value="70">
+
+  <button onclick="calculate()">Calculate My BMI</button>
+
+  <div class="result" id="result">
+    <div class="result-row">
+      <span>Your BMI:</span>
+      <span id="bmi">—</span>
+    </div>
+    <div class="result-row">
+      <span>Category (standard):</span>
+      <span id="category">—</span>
+    </div>
+    <div class="result-row total">
+      <span>Senior healthy range:</span>
+      <span id="seniorRange">—</span>
+    </div>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="related">
+    <h3>Related calculators</h3>
+    <ul>
+      <li><a href="diabetic-calories.html">Diabetic Calorie Calculator</a> — calories with type 2 diabetes in mind</li>
+      <li><a href="strength-protein.html">Strength Training Protein Calculator</a> — preserve muscle mass with age</li>
+      <li><a href="vitamin-d.html">Vitamin D Calculator</a> — seniors often need more vitamin D</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Senior BMI — FAQ</h2>
+    <div class="faq-item">
+      <h3>Why is BMI different for seniors?</h3>
+      <p>After age 65, people naturally lose muscle mass and gain body fat. Standard BMI doesn't distinguish between muscle and fat, so a healthy-looking BMI may hide excess fat. Research shows that a slightly higher BMI (23–28) is actually protective for seniors.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is a healthy BMI for a 70-year-old?</h3>
+      <p>For adults over 65, a BMI between 23 and 28 is generally considered healthy. Below 23 is underweight (risk of frailty and falls), and above 30 is obese. This is slightly higher than the standard adult range (18.5–24.9).</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is BMI accurate for older adults?</h3>
+      <p>Not perfectly. BMI doesn't measure body fat directly or distinguish muscle from fat. For seniors, waist circumference and grip strength are often better indicators of health. Use BMI as one data point, not the whole picture.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Should seniors lose weight?</h3>
+      <p>It depends. If you're obese (BMI over 30) and have weight-related health issues (diabetes, joint pain), modest weight loss can help. But for many seniors, maintaining weight and muscle mass is more important than losing weight.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How can seniors maintain muscle mass?</h3>
+      <p>Two things: resistance training (2–3 times per week) and adequate protein (1.0–1.2 g per kg of body weight per day). Our <a href="strength-protein.html">Strength Training Protein Calculator</a> can help you figure out the right amount.</p>
+    </div>
+  </div>
+
+  <p class="note">This calculator provides an estimate for educational purposes only. It is not medical advice. Always consult your doctor before making changes to your diet or exercise routine.</p>
+
+  <a href="index.html" class="back-link">← Back to all calculators</a>
+</div>
+
+<script>
+function calculate() {
+  const weight = parseFloat(document.getElementById('weight').value);
+  const height = parseFloat(document.getElementById('height').value) / 100;
+  const age = parseFloat(document.getElementById('age').value);
+
+  if (!weight || !height || !age) {
+    alert('Please fill in weight, height, and age');
+    return;
+  }
+
+  const bmi = weight / (height * height);
+  let category = '';
+  let tipText = '';
+
+  if (bmi < 18.5) category = 'Underweight';
+  else if (bmi < 25) category = 'Normal';
+  else if (bmi < 30) category = 'Overweight';
+  else category = 'Obese';
+
+  let seniorRange = '';
+  if (age >= 65) {
+    seniorRange = '23.0 – 28.0';
+    if (bmi < 23) {
+      tipText = '⚠️ Your BMI is below the senior healthy range. This may indicate frailty or malnutrition — talk to your doctor.';
+    } else if (bmi <= 28) {
+      tipText = '✅ Your BMI is in the healthy range for seniors. Keep up your strength training and protein intake.';
+    } else {
+      tipText = '⚠️ Your BMI is above the senior healthy range. Consider a gentle weight management plan — but prioritize muscle preservation.';
+    }
+  } else {
+    seniorRange = '18.5 – 24.9 (standard)';
+    tipText = '💡 You are under 65. Use the standard adult BMI range. Once you turn 65, healthy ranges shift slightly higher.';
+  }
+
+  const fmt = (n) => n.toFixed(1);
+
+  document.getElementById('bmi').textContent = fmt(bmi);
+  document.getElementById('category').textContent = category;
+  document.getElementById('seniorRange').textContent = seniorRange;
+  document.getElementById('tip').textContent = tipText;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-calculators/sw.js');
+  }
+</script>
+
+</body>
+</html>
