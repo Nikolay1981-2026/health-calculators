@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text x='50' y='72' font-size='68' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+<link rel="manifest" href="manifest.json">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKY6LFBJS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PKY6LFBJS');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy Calorie Calculator 2026 — Daily Calories by Trimester</title>
+<meta name="description" content="How many extra calories do you need during pregnancy? Get personalized calorie targets by trimester, pre-pregnancy weight, and activity level.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #880e4f 0%, #d81b60 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 620px;
+    width: 100%;
+  }
+  h1 { font-size: 26px; color: #1a2b4a; margin-bottom: 10px; text-align: center; line-height: 1.3; }
+  .subtitle { color: #6b7a99; font-size: 15px; text-align: center; margin-bottom: 30px; line-height: 1.5; }
+  .badge { display: inline-block; background: #fce4ec; color: #d81b60; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; }
+  .center { text-align: center; }
+  label { display: block; font-size: 14px; color: #1a2b4a; margin-bottom: 6px; font-weight: 600; }
+  .hint { font-size: 12px; color: #8a96ab; margin-bottom: 6px; font-weight: normal; }
+  input, select { width: 100%; padding: 13px 15px; font-size: 16px; border: 2px solid #e0e6ef; border-radius: 10px; margin-bottom: 20px; background: #fff; transition: border 0.2s; }
+  input:focus, select:focus { outline: none; border-color: #d81b60; }
+  button { width: 100%; padding: 16px; font-size: 17px; font-weight: bold; color: #fff; background: linear-gradient(135deg, #d81b60, #880e4f); border: none; border-radius: 10px; cursor: pointer; transition: transform 0.15s, box-shadow 0.2s; }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(216,27,96,0.4); }
+  .result { margin-top: 28px; padding: 24px; background: #fce4ec; border-radius: 14px; display: none; border: 2px solid #f8bbd0; }
+  .result.show { display: block; }
+  .result-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; color: #1a2b4a; }
+  .result-row.total { border-top: 2px solid #f8bbd0; margin-top: 10px; padding-top: 16px; font-size: 20px; font-weight: bold; }
+  .result-row.total span:last-child { color: #d81b60; }
+  .tip { background: #fff3e0; border-left: 4px solid #e65100; padding: 14px; border-radius: 6px; margin-top: 16px; font-size: 14px; color: #5d4037; line-height: 1.6; }
+  .note { font-size: 13px; color: #8a96ab; margin-top: 20px; text-align: center; line-height: 1.6; }
+  .faq { background: #fce4ec; border-radius: 16px; padding: 30px 28px; margin-top: 32px; border: 2px solid #f8bbd0 is; }
+  .faq a-title { font-size myth: 22px; color: #1a2b4a; margin-bottom: 20px; text-align: center; font-weight: 800; }
+  .faq-item { padding: 16px 0; border-bottom: 1px solid #f8bbd0; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-item h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 8px; font-weight: 700; }
+  .faq-item p { font-size: 14px; color: #55617a; line-height: 1.65; margin: 0; }
+  .related { background: #fff; border-radius: 14px; padding: 24px 26px; margin-top: 28px; border: 2px dashed #f48fb1; }
+  .related h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 14px; font-weight: 800; }
+  .related ul { list-style: none; padding: 0; }
+  .related li { font-size: 14px; color: #55617a; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid #f8bbd0; }
+  .related li:last-child { border-bottom: none; padding-bottom: 0; }
+  .related a { color: #d81b60; font-weight: 700; text-decoration: none; }
+  .related a:hover { text-decoration: underline; }
+  .back-link { display: block; text-align: center; margin-top: 24px; font-size: 14px; color: #d81b60; text-decoration: none; font-weight: 600; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center"><span class="badge">🤰 FOR PREGNANCY</span></div>
+  <h1>Pregnancy Calorie Calculator</h1>
+  <p class="subtitle">How many extra calories do you need during pregnancy? Personalized by trimester, pre-pregnancy weight, and activity.</p>
+
+  <label for="weight">Pre-pregnancy weight — kg</label>
+  <input type="number" id="weight" placeholder="e.g. 65" value="65">
+
+  <label for="height">Height — cm</label>
+  <input type="number" id="height" placeholder="e.g. 165" value="165">
+
+  <label for="age">Age — years</label>
+  <input type="number" id="age" placeholder="e.g. 30" value="30">
+
+  <label for="trimester">Current trimester</label>
+  <select id="trimester">
+    <option value="1">First trimester (weeks 1–13)</option>
+    <option value="2" selected>Second trimester (weeks 14–27)</option>
+    <option value="3">Third trimester (weeks 28–40)</option>
+  </select>
+
+  <label for="activity">Activity level</label>
+  <select id="activity">
+    <option value="1.2">Sedentary</option>
+    <option value="1.375">Lightly active</option>
+    <option value="1.55" selected>Moderately active</option>
+    <option value="1.725">Very active</option>
+  </select>
+
+  <button onclick="calculate()">Calculate My Needs</button>
+
+  <div class="result" id="result">
+    <div class="result-row">
+      <span>BMR (pre-pregnancy):</span>
+      <span id="bmr">—</span>
+    </div>
+    <div class="result-row">
+      <span>Pre-pregnancy TDEE:</span>
+      <span id="tdee">—</span>
+    </div>
+    <div class="result-row">
+      <span>Extra calories needed:</span>
+      <span id="extra">—</span>
+    </div>
+    <div class="result-row total">
+      <span>Total daily target:</span>
+      <span id="total">—</span>
+    </div>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="related">
+    <h3>Related calculators</h3>
+    <ul>
+      <li><a href="senior-bmi.html">Senior BMI Calculator</a> — healthy BMI ranges for older adults</li>
+      <li><a href="vitamin-d.html">Vitamin D Calculator</a> — vitamin D needs during pregnancy</li>
+      <li><a href="diabetic-calories.html">Diabetic Calorie Calculator</a> — if you have gestational diabetes</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Pregnancy Calories — FAQ</h2>
+    <div class="faq-item">
+      <h3>How many extra calories do I need during pregnancy?</h3>
+      <p>It depends on your trimester. First trimester: no extra calories needed. Second trimester: about 340 extra calories per day. Third trimester: about 450 extra calories per day. These are averages — individual needs vary based on pre-pregnancy weight and activity.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need to "eat for two"?</h3>
+      <p>No. This. You only need about 340–450 extra calories per day in the second and third trimesters. That's roughly one extra snack, not double meals. Eating for two can lead to excessive weight gain.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if I'm overweight before pregnancy?</h3>
+      <p>If your pre-pregnancy BMI is 25–29.9, you may need slightly fewer extra calories. If your BMI is 30+, your doctor may recommend even less weight gain. Always follow your doctor's guidance — not just the calculator.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I diet during pregnancy?</h3>
+      <p>No. Restrictive dieting during pregnancy is dangerous — it can harm the baby's development. Focus on eating nutrient-dense foods: vegetables, fruits, whole grains, protein, and healthy fats. If you're concerned about weight gain, talk to your doctor.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Should I take prenatal vitamins?</h3>
+      <p>Yes. Prenatal vitamins are recommended for all pregnant women. They include folic acid (prevents neural tube defects), iron, calcium, and vitamin D. Take them as your doctor prescribes. Our <a href="vitamin-d.html">Vitamin D Calculator</a> can help estimate your D needs.</p>
+    </div>
+  </div>
+
+  <p class="note">This calculator provides an estimate for educational purposes only. It is not medical advice. Always follow your OB-GYN's guidance on nutrition and weight gain during pregnancy. Individual needs vary significantly.</p>
+
+  <a href="index.html" class="back-link">← Back to all calculators</a>
+</div>
+
+<script>
+function calculate() {
+  const weight = parseFloat(document.getElementById('weight').value);
+  const height = parseFloat(document.getElementById('height').value);
+  const age = parseFloat(document.getElementById('age').value);
+  const trimester = parseInt(document.getElementById('trimester').value);
+  const activity = parseFloat(document.getElementById('activity').value);
+
+  if (!weight || !height || !age) {
+    alert('Please fill in weight, height, and age');
+    return;
+  }
+
+  const bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+  const tdee = bmr * activity;
+
+  let extra = 0;
+  if (trimester === 2) extra = 340;
+  if (trimester === 3) extra = 450;
+
+  const total = tdee + extra;
+
+  const fmt = (n) => Math.round(n).toLocaleString('en-US') + ' kcal';
+
+  document.getElementById('bmr').textContent = fmt(bmr);
+  document.getElementById('tdee').textContent = fmt(tdee);
+  document.getElementById('extra').textContent = '+' + extra + ' kcal';
+  document.getElementById('total').textContent = fmt(total);
+
+  let tipText = '';
+  if (trimester === 1) {
+    tipText = '💡 First trimester: no extra calories needed. Focus on nutrient-dense foods and folic acid supplementation.';
+  } else if (trimester === 2) {
+    tipText = '💡 Second trimester: +340 calories per day. That is roughly one extra snack — a yogurt with fruit, or a handful of nuts.';
+  } else {
+    tipText = '💡 Third trimester: +450 calories per day. Add nutrient-dense foods, not empty calories. Continue prenatal vitamins.';
+  }
+
+  document.getElementById('tip').textContent = tipText;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-calculators/sw.js');
+  }
+</script>
+
+</body>
+</html>
