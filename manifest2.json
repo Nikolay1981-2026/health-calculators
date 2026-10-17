@@ -10,7 +10,7 @@
   "theme_color": "#2e7d32",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "icon-health.png",
       "sizes": "1600x1600",
       "type": "image/png" 
     }
