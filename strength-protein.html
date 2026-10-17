@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e7d32'/><text x='50' y='72' font-size='68' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+<link rel="manifest" href="manifest.json">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKY6LFBJS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5PKY6LFBJS');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strength Training Protein Calculator 2026 — How Much Protein for Muscle?</title>
+<meta name="description" content="Calculate exactly how much protein you need to build muscle. Personalized by body weight, training intensity, and goals.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 620px;
+    width: 100%;
+  }
+  h1 { font-size: 26px; color: #1a2b4a; margin-bottom: 10px; text-align: center; line-height: 1.3; }
+  .subtitle { color: #6b7a99; font-size: 15px; text-align: center; margin-bottom: 30px; line-height: 1.5; }
+  .badge { display: inline-block; background: #efebe9; color: #5d4037; font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 20px; margin-bottom: 20px; }
+  .center { text-align: center; }
+  label { display: block; font-size: 14px; color: #1a2b4a; margin-bottom: 6px; font-weight: 600; }
+  .hint { font-size: 12px; color: #8a96ab; margin-bottom: 6px; font-weight: normal; }
+  input, select { width: 100%; padding: 13px 15px; font-size: 16px; border: 2px solid #e0e6ef; border-radius: 10px; margin-bottom: 20px; background: #fff; transition: border 0.2s; }
+  input:focus, select:focus { outline: none; border-color: #5d4037; }
+  button { width: 100%; padding: 16px; font-size: 17px; font-weight: bold; color: #fff; background: linear-gradient(135deg, #5d4037, #3e2723); border: none; border-radius: 10px; cursor: pointer; transition: transform 0.15s, box-shadow 0.2s; }
+  button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(93,64,55,0.4); }
+  .result { margin-top: 28px; padding: 24px; background: #efebe9; border-radius: 14px; display: none; border: 2px solid #d7ccc8; }
+  .result.show { display: block; }
+  .result-row { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; color: #1a2b4a; }
+  .result-row.total { border-top: 2px solid #d7ccc8; margin-top: 10px; padding-top: 16px; font-size: 20px; font-weight: bold; }
+  .result-row.total span:last-child { color: #5d4037; }
+  .tip { background: #fff3e0; border-left: 4px solid #e65100; padding: 14px; border-radius: 6px; margin-top: 16px; font-size: 14px; color: #5d4037; line-height: 1.6; }
+  .note { font-size: 13px; color: #8a96ab; margin-top: 20px; text-align: center; line-height: 1.6; }
+  .faq { background: #efebe9; border-radius: 16px; padding: 30px 28px; margin-top: 32px; border: 2px solid #d7ccc8; }
+  .faq-title { font-size: 22px; color: #1a2b4a; margin-bottom: 20px; text-align: center; font-weight: 800; }
+  .faq-item { padding: 16px 0; border-bottom: 1px solid #d7ccc8; }
+  .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .faq-item h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 8px; font-weight: 700; }
+  .faq-item p { font-size: 14px; color: #55617a; line-height: 1.65; margin: 0; }
+  .related { background: #fff; border-radius: 14px; padding: 24px 26px; margin-top: 28px; border: 2px dashed #bcaaa4; }
+  .related h3 { font-size: 16px; color: #1a2b4a; margin-bottom: 14px; font-weight: 800; }
+  .related ul { list-style: none; padding: 0; }
+  .related li { font-size: 14px; color: #55617a; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid #d7ccc8; }
+  .related li:last-child { border-bottom: none; padding-bottom: 0; }
+  .related a { color: #5d4037; font-weight: 700; text-decoration: none; }
+  .related a:hover { text-decoration: underline; }
+  .back-link { display: block; text-align: center; margin-top: 24px; font-size: 14px; color: #5d4037; text-decoration: none; font-weight: 600; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="center"><span class="badge">💪 FOR STRENGTH</span></div>
+  <h1>Strength Training Protein Calculator</h1>
+  <p class="subtitle">Build muscle faster with the right protein intake. Based on body weight, training intensity, and goals.</p>
+
+  <label for="weight">Body weight — kg</label>
+  <input type="number" id="weight" placeholder="e.g. 80" value="80">
+
+  <label for="goal">Main goal</label>
+  <select id="goal">
+    <option value="maintain">Maintain muscle</option>
+    <option value="build" selected>Build muscle (bulking)</option>
+    <option value="cut">Lose fat, keep muscle (cutting)</option>
+  </select>
+
+  <label for="intensity">Training intensity</label>
+  <select id="intensity">
+    <option value="light">Light (1–2 days/week)</option>
+    <option value="moderate" selected>Moderate (3–4 days/week)</option>
+    <option value="intense">Intense (5+ days/week, heavy lifting)</option>
+  </select>
+
+  <button onclick="calculate()">Calculate My Protein Needs</button>
+
+  <div class="result" id="result">
+    <div class="result-row">
+      <span>Minimum daily protein:</span>
+      <span id="minProtein">—</span>
+    </div>
+    <div class="result-row">
+      <span>Optimal daily protein:</span>
+      <span id="optProtein">—</span>
+    </div>
+    <div class="result-row total">
+      <span>Recommended target:</span>
+      <span id="targetProtein">—</span>
+    </div>
+    <div class="tip" id="tip"></div>
+  </div>
+
+  <div class="related">
+    <h3>Related calculators</h3>
+    <ul>
+      <li><a href="vegan-macros.html">Vegan Macro Calculator</a> — plant-based protein sources and targets</li>
+      <li><a href="athlete-water.html">Athlete Water Calculator</a> — hydration for strength athletes</li>
+      <li><a href="diabetic-calories.html">Diabetic Calorie Calculator</a> — if you manage blood sugar while training</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h2 class="faq-title">Protein for Strength — FAQ</h2>
+    <div class="faq-item">
+      <h3>How much protein do I need to build muscle?</h3>
+      <p>Research shows 1.6–2.2 g of protein per kg of body weight per day is optimal for muscle growth. Above 2.2 g/kg, there's little additional benefit for most people. Use the calculator above for your personalized target.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I eat too much protein?</h3>
+      <p>For healthy people, high protein intake (up to 3 g/kg) is generally safe. But very high protein can strain the kidneys in people with existing kidney disease. If you have kidney issues, talk to your doctor.</p>
+    </div>
+    <div class="faq-item">
+      <h3>When should I eat protein?</h3>
+      <p>Spread protein evenly across 3–5 meals per day. Aim for 20–40 g per meal. The "anabolic window" (eating protein within 30 minutes after training) is less important than total daily intake — but a post-workout shake is convenient.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What are the best protein sources?</h3>
+      <p>Animal sources: chicken, beef, fish, eggs, dairy, whey. Plant sources: soy, lentils, chickpeas, beans, tofu, tempeh, quinoa, hemp seeds. Plant proteins are slightly less bioavailable, so vegans may need 10–20% more protein. See our <a href="vegan-macros.html">Vegan Macro Calculator</a>.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need protein supplements?</h3>
+      <p>No. You can meet your protein needs with whole foods. But protein powder (whey or plant-based) is a convenient way to hit your target, especially if you struggle to eat enough protein from food.</p>
+    </div>
+  </div>
+
+  <p class="note">This calculator provides an estimate for educational purposes only. It is not medical advice. Always consult a registered dietitian or sports nutritionist for personalized guidance, especially if you have kidney disease or other health conditions.</p>
+
+  <a href="index.html" class="back-link">← Back to all calculators</a>
+</div>
+
+<script>
+function calculate() {
+  const weight = parseFloat(document.getElementById('weight').value);
+  const goal = document.getElementById('goal').value;
+  const intensity = document.getElementById('intensity').value;
+
+  if (!weight) {
+    alert('Please enter your body weight');
+    return;
+  }
+
+  let minPerKg = 1.6;
+  let optPerKg = 2.0;
+
+  if (goal === 'cut') {
+    minPerKg = 1.8;
+    optPerKg = 2.4;
+  } else if (goal === 'maintain') {
+    minPerKg = 1.4;
+    optPerKg = 1.8;
+  }
+
+  if (intensity === 'intense') {
+    optPerKg += 0.2;
+  } else if (intensity === 'light') {
+    optPerKg -= 0.2;
+  }
+
+  const minProtein = weight * minPerKg;
+  const optProtein = weight * optPerKg;
+
+  const fmt = (n) => Math.round(n) + ' g';
+
+  document.getElementById('minProtein').textContent = fmt(minProtein);
+  document.getElementById('optProtein').textContent = fmt(optProtein);
+  document.getElementById('targetProtein').textContent = fmt(optProtein);
+
+  let tipText = '';
+  if (goal === 'build') {
+    tipText = '💪 To build muscle, aim for ' + fmt(optProtein) + ' per day. Spread it across 4–5 meals (about ' + Math.round(optProtein / 4) + ' g per meal).';
+  } else if (goal === 'cut') {
+    tipText = '⚠️ To lose fat while keeping muscle, keep protein high: ' + fmt(optProtein) + ' per day. This preserves muscle in a calorie deficit.';
+  } else {
+    tipText = '✅ To maintain muscle, ' + fmt(optProtein) + ' per day is enough. Focus on strength training and adequate calories.';
+  }
+
+  document.getElementById('tip').textContent = tipText;
+  document.getElementById('result').classList.add('show');
+}
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/health-calculators/sw.js');
+  }
+</script>
+
+</body>
+</html>
